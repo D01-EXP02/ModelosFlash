@@ -1,0 +1,62 @@
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../image/fondo\ generico.jpg'); /* Ruta de la imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100%; /* Asegura que ocupen el 100% de la altura */
+  width: 100%;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-color: #ffffff76; /* Fondo claro */
+}
+
+.login-box {
+  background-color: white; /* Fondo del cuadro */
+  padding: 30px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Centra el contenido */
+  width: 300px; /* Ancho fijo */
+}
+
+.login-logo {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaciado entre los elementos del formulario */
+}
+
+input {
+  padding: 10px;
+  width: 100%; /* Ocupa todo el ancho del cuadro */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
