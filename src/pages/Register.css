@@ -59,9 +59,9 @@
   }
   
   .register-table tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: #000000;
   }
   
   .register-table tr:hover {
-    background-color: #ffffff;
+    background-color: #000000;
   }

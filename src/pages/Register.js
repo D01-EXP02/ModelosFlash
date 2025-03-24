@@ -1,48 +1,37 @@
-import React from 'react';
-import './Register.css'; // Archivo CSS para estilos
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
-
+import React, { useState, useEffect } from 'react';
+import './Register.css';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
-    const navigate = useNavigate();
-  const data = [
-    { estudiante: 'Juan Pérez', trabajos: 90, quiz: 85, primerCorte: 88, segundoCorte: 92, tercerCorte: 87 },
-    { estudiante: 'María López', trabajos: 95, quiz: 80, primerCorte: 90, segundoCorte: 85, tercerCorte: 88 },
-    { estudiante: 'Carlos García', trabajos: 85, quiz: 75, primerCorte: 80, segundoCorte: 78, tercerCorte: 82 },
-  ];
+  const navigate = useNavigate();
+  const [data, setData] = useState([]);
 
-  const handleEditNotes = () => {
-    alert('Editar notas');
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/students'); // Cambia la ruta al servidor
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const students = await response.json();
+        setData(students);
+      } catch (error) {
+        console.error("Error al cargar los datos:", error);
+      }
+    };
 
-  const handleAddStudent = () => {
-    alert('Agregar estudiante');
-  };
-
-  const handleDeleteStudent = () => {
-    alert('Eliminar estudiante');
-  };
+    fetchData();
+  }, []);
 
   return (
     <div className="register-container">
-
       <button className="back-button" onClick={() => navigate('/cards')}>
         RETROCEDER
       </button>
       <h1>Registro de Notas</h1>
-
-      <div className="table-actions">
-        <button className="action-button" onClick={handleEditNotes}>
-          EDITAR NOTAS
-        </button>
-        <button className="action-button" onClick={handleAddStudent}>
-          AGREGAR ESTUDIANTE
-        </button>
-        <button className="action-button" onClick={handleDeleteStudent}>
-          ELIMINAR ESTUDIANTE
-        </button>
-      </div>
-      
+      <button className="add-student-button" onClick={() => navigate('/add-student')}>
+        AGREGAR ESTUDIANTE
+      </button>
       <table className="register-table">
         <thead>
           <tr>

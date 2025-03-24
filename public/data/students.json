@@ -1,0 +1,50 @@
+[
+  {
+    "estudiante": "David Expitian",
+    "trabajos": 5,
+    "quiz": 3.5,
+    "primerCorte": 4,
+    "segundoCorte": 4.2,
+    "tercerCorte": 4.4
+  },
+  {
+    "estudiante": "María López",
+    "trabajos": 4.5,
+    "quiz": 4,
+    "primerCorte": 4.3,
+    "segundoCorte": 4.1,
+    "tercerCorte": 4.6
+  },
+  {
+    "estudiante": "Harold",
+    "trabajos": 2.3,
+    "quiz": 3,
+    "primerCorte": 3,
+    "segundoCorte": 3,
+    "tercerCorte": 3
+  },
+  {
+    "estudiante": "Harold",
+    "trabajos": 2,
+    "quiz": 3,
+    "primerCorte": 2,
+    "segundoCorte": 2,
+    "tercerCorte": 3
+  },
+  {
+    "estudiante": "juan",
+    "trabajos": 4,
+    "quiz": 3,
+    "primerCorte": 2.3,
+    "segundoCorte": 3.8,
+    "tercerCorte": 5
+  },
+  {
+    "estudiante": "kenier",
+    "trabajos": 4.3,
+    "quiz": 2,
+    "primerCorte": 2,
+    "segundoCorte": 2,
+    "tercerCorte": 2
+  }
+]

@@ -1,0 +1,19 @@
+.back-button {
+    background-color: #009b53;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #007a42;
+  }
+
+  .submit-button {	
+    background-color: #009b53;
+    color: white;
+  }
