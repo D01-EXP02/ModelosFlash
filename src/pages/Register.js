@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
+import * as XLSX from 'xlsx';
+import { saveAs } from 'file-saver';
 
 function Register() {
   const navigate = useNavigate();
@@ -23,6 +25,20 @@ function Register() {
     fetchData();
   }, []);
 
+  const exportToExcel = () => {
+    // Crea una hoja de cálculo a partir de los datos
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Estudiantes');
+
+    // Genera el archivo Excel
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+
+    // Guarda el archivo usando FileSaver
+    const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
+    saveAs(blob, 'RegistroEstudiantes.xlsx');
+  };
+
   return (
     <div className="register-container">
       <button className="back-button" onClick={() => navigate('/cards')}>
@@ -31,6 +47,9 @@ function Register() {
       <h1>Registro de Notas</h1>
       <button className="add-student-button" onClick={() => navigate('/add-student')}>
         AGREGAR ESTUDIANTE
+      </button>
+      <button className="export-button" onClick={exportToExcel}>
+        Exportar a Excel
       </button>
       <table className="register-table">
         <thead>

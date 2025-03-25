@@ -65,3 +65,18 @@
   .register-table tr:hover {
     background-color: #000000;
   }
+
+  .export-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px;
+  }
+  
+  .export-button:hover {
+    background-color: #0056b3;
+  }

@@ -5,6 +5,8 @@ import LoginPage from './pages/LoginPage'; // Asegúrate de que esta ruta sea co
 import CardsPage from './pages/CardsPage'; // Asegúrate de que esta ruta sea correcta
 import RegisterPage from './pages/Register'; // Asegúrate de que esta ruta sea correcta
 import AddStudent from './pages/Addstudent';
+import AgregarMateria from './pages/AgregarMateria'; // Asegúrate de que esta ruta sea correcta
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Route path="/cards" element={<CardsPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/add-student" element={<AddStudent />} />
+        <Route path="/agregar-materia" element={<AgregarMateria />} />
       </Routes>
     </div>
   );

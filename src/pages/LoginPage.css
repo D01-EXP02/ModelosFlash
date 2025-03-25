@@ -47,6 +47,26 @@ input {
   font-size: 14px;
 }
 
+input.error-shake {
+  border: 1px solid red;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0px); }
+}
+
+.error-text {
+  color: #d9534f; /* Un rojo elegante y profesional */
+  margin: -10px 0 10px 0;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
 button {
   padding: 10px;
   background-color: #007bff;
@@ -59,4 +79,10 @@ button {
 
 button:hover {
   background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
 }
